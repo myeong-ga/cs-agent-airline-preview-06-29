@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant User
+    participant UI (React Component)
+    participant useChat (Hook)
+    participant API (/api/chat)
+    participant AI Agents
+
+    User->>UI: 메시지 입력 및 'Send' 클릭
+    UI->>useChat: sendMessage(message) 호출
+    useChat->>API: fetch POST 요청 (message, conversationId)
+    API->>AI Agents: run(agent, message, context) 실행
+    AI Agents-->>API: 에이전트 실행 (Handoff, Tool Call 등)
+    API->>useChat: ChatResponse 반환 (newMessages, newAgent, newContext, newEvents)
+    useChat->>UI: 상태 업데이트 (setState)
+    UI->>User: 업데이트된 대화, 컨텍스트, 이벤트 표시
