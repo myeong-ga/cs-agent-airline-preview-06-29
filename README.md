@@ -22,3 +22,7 @@
 전체 실행 흐름은 Next.js API Route (`/api/chat`) 내의 **`Runner`**가 관리하며, 사용자와의 상호작용, 에이전트 전환, 도구 호출 등 모든 과정은 **`Events`**로 기록됩니다. 프론트엔드는 이 데이터를 받아 '채팅 패널', '컨텍스트/도구 패널', '이벤트 로그 패널'의 3단 구조로 시각화하여 에이전트의 모든 작동 과정을 투명하게 보여줍니다.
 
 이처럼 프로젝트는 OpenAI Agent SDK의 핵심 기능인 `Agent`, `Tool`, `Handoff`, `Guardrail`, `Runner`를 유기적으로 결합하여 복잡한 실제 시나리오를 해결하는 정교한 Agentic 서비스를 성공적으로 구축했습니다.
+
+## 📹 Demo
+
+https://github.com/user-attachments/assets/5ef2a827-ed37-406e-abd9-2f282525f90e
